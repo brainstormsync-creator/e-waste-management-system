@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <script src="../js/theme.js"></script>
+  <title>My Dashboard | E-Waste Management System</title>
+</head>
+<body class="page-body">
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">♻️ E-Waste<span>Manager</span></a>
+      <div class="nav-buttons">
+        <span class="nav-user" id="userName"></span>
+        <button id="themeToggle" type="button" class="btn btn-outline" aria-pressed="false">Dark mode</button>
+        <button id="logoutBtn" type="button" class="btn btn-primary">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="dash">
+    <div class="container">
+      <div class="dash-head">
+        <h1>Hello, <span id="welcomeName"></span></h1>
+        <p>Submit your old electronics and follow each pickup from request to recycling.</p>
+      </div>
+
+      <div class="stat-cards">
+        <div class="stat-card"><strong id="statTotal">0</strong><span>Total requests</span></div>
+        <div class="stat-card"><strong id="statPending">0</strong><span>Waiting for review</span></div>
+        <div class="stat-card"><strong id="statApproved">0</strong><span>Approved</span></div>
+        <div class="stat-card"><strong id="statDone">0</strong><span>Collected or recycled</span></div>
+      </div>
+
+      <div class="dash-grid">
+        <section class="panel">
+          <h2>Request a pickup</h2>
+          <form id="requestForm" novalidate>
+            <div id="formAlert" class="form-alert" role="alert"></div>
+
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select id="category" name="category">
+                <option value="">Choose a category</option>
+                <option>Mobiles &amp; Tablets</option>
+                <option>Computers &amp; Laptops</option>
+                <option>Batteries</option>
+                <option>TVs &amp; Monitors</option>
+                <option>Home Appliances</option>
+                <option>Cables &amp; Accessories</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="itemName">Item name</label>
+              <input type="text" id="itemName" name="itemName" maxlength="100" placeholder="e.g. Old Samsung phone" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="1000" value="1" />
+              </div>
+              <div class="form-group">
+                <label for="condition">Condition</label>
+                <select id="condition" name="condition">
+                  <option value="">Choose condition</option>
+                  <option>Working</option>
+                  <option>Not Working</option>
+                  <option>Damaged</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="description">Description (optional)</label>
+              <textarea id="description" name="description" rows="3" maxlength="500" placeholder="Brand, age, anything we should know"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="address">Pickup address</label>
+              <textarea id="address" name="address" rows="3" maxlength="300" placeholder="House no., street, city, PIN code"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="pickupDate">Pickup date</label>
+              <input type="date" id="pickupDate" name="pickupDate" />
+            </div>
+            <div class="form-group">
+              <label for="image">Photo (optional)</label>
+              <input type="file" id="image" name="image" accept="image/jpeg,image/png,image/webp" />
+              <small class="form-hint">JPG, PNG or WEBP, up to 5 MB.</small>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit request</button>
+          </form>
+        </section>
+
+        <section class="panel">
+          <h2>My requests</h2>
+          <div class="req-list" id="requestList"><p class="empty">Loading…</p></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <script src="../js/theme.js"></script>
+  <title>Register | E-Waste Management System</title>
+</head>
+<body class="page-body">
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">♻️ E-Waste<span>Manager</span></a>
+      <div class="nav-buttons">
+        <button id="themeToggle" type="button" class="btn btn-outline" aria-pressed="false">Dark mode</button>
+        <a href="login.html" class="btn btn-primary">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-wrap">
+    <div class="container" style="display:flex;justify-content:center;">
+      <section class="auth-card">
+        <h1>Create your account</h1>
+        <p class="lead">It takes less than a minute and it is free.</p>
+
+        <form id="registerForm" novalidate>
+          <div id="formAlert" class="form-alert" role="alert"></div>
+
+          <div class="form-group">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="name" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="At least 6 characters" autocomplete="new-password" />
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">Confirm password</label>
+              <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Repeat password" autocomplete="new-password" />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Create account</button>
+        </form>
+
+        <p class="auth-switch">Already registered? <a href="login.html">Log in</a></p>
+      </section>
+    </div>
+  </main>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

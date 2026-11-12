@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <script src="../js/theme.js"></script>
+  <title>Admin | E-Waste Management System</title>
+</head>
+<body class="page-body">
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">♻️ E-Waste<span>Manager</span></a>
+      <div class="nav-buttons">
+        <span class="nav-user" id="userName"></span>
+        <button id="themeToggle" type="button" class="btn btn-outline" aria-pressed="false">Dark mode</button>
+        <button id="logoutBtn" type="button" class="btn btn-primary">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="dash">
+    <div class="container">
+      <div class="dash-head">
+        <h1>Admin dashboard</h1>
+        <p>Review incoming requests, approve pickups and mark items as collected or recycled.</p>
+      </div>
+
+      <div class="stat-cards">
+        <div class="stat-card"><strong id="sTotal">0</strong><span>Total requests</span></div>
+        <div class="stat-card"><strong id="sPending">0</strong><span>Need review</span></div>
+        <div class="stat-card"><strong id="sActive">0</strong><span>Approved or collected</span></div>
+        <div class="stat-card"><strong id="sUsers">0</strong><span>Registered users</span></div>
+      </div>
+
+      <div class="toolbar">
+        <h2 style="font-size:1.45rem;color:var(--emerald-900);">All requests</h2>
+        <label>Show:
+          <select id="statusFilter">
+            <option value="">All statuses</option>
+            <option value="pending">Pending</option>
+            <option value="approved">Approved</option>
+            <option value="collected">Collected</option>
+            <option value="recycled">Recycled</option>
+            <option value="rejected">Rejected</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>User</th><th>Item</th><th>Address</th><th>Pickup</th><th>Status</th><th>Update</th></tr>
+          </thead>
+          <tbody id="requestRows"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="E-Waste Management System - Recycle your electronic waste responsibly." />
+  <title>E-Waste Management System | Recycle Responsibly</title>
+
+  <!-- Google Font (falls back to Arial if offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Our main stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ 1. NAVIGATION BAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">♻️ E-Waste<span>Manager</span></a>
+
+      <!-- Hamburger button (visible on mobile only) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#categories" class="nav-link">Categories</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-buttons">
+            <button id="themeToggle" type="button" class="btn btn-outline" aria-pressed="false">
+             Dark mode
+            </button>
+          <a href="pages/login.html" class="btn btn-outline">Login</a>
+          <a href="pages/register.html" class="btn btn-primary">Register</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ 2. HERO SECTION ============ -->
+    <section class="hero" id="home">
+      <div class="container hero-container">
+        <div class="hero-text">
+          <span class="badge">🌍 Go Green, Go Clean</span>
+          <h1>Recycle Your <span class="highlight">E-Waste</span> The Right Way</h1>
+          <p>
+            Register, submit your old electronic items, schedule a pickup,
+            and track your request, all from one simple platform.
+          </p>
+          <div class="hero-buttons">
+            <a href="pages/register.html" class="btn btn-primary btn-lg">Get Started</a>
+            <a href="#how-it-works" class="btn btn-outline-light btn-lg">Learn How It Works</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-icon">♻️</div>
+          <h3>Our Impact</h3>
+          <div class="stats">
+            <div class="stat">
+              <strong data-target="1200">0</strong>
+              <span>Items Recycled</span>
+            </div>
+            <div class="stat">
+              <strong data-target="350">0</strong>
+              <span>Happy Users</span>
+            </div>
+            <div class="stat">
+              <strong data-target="95">0</strong>
+              <span>Pickups Done</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. ABOUT SECTION ============ -->
+    <section class="section" id="about">
+      <div class="container about-container">
+        <div class="about-image">
+          <div class="about-box">
+            <span>🖥️</span>
+            <span>📱</span>
+            <span>🔋</span>
+            <span>💻</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <h2 class="section-title left">About Our Platform</h2>
+          <p>
+            Electronic waste (e-waste) is one of the fastest-growing waste problems in the world.
+            Old phones, laptops, batteries and appliances contain harmful materials such as lead
+            and mercury, but also valuable metals that can be reused.
+          </p>
+          <p>
+            The <strong>E-Waste Management System</strong> connects people with recycling services.
+            Users can submit their e-waste details and request pickups, while administrators review,
+            approve, collect and recycle items safely.
+          </p>
+          <ul class="check-list">
+            <li>✔ Easy online registration and request tracking</li>
+            <li>✔ Safe and responsible recycling</li>
+            <li>✔ Transparent pickup status updates</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. E-WASTE CATEGORIES ============ -->
+    <section class="section section-alt" id="categories">
+      <div class="container">
+        <h2 class="section-title">E-Waste Categories We Accept</h2>
+        <p class="section-subtitle">Choose the category that matches your item when submitting a request.</p>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-icon">📱</div>
+            <h3>Mobiles &amp; Tablets</h3>
+            <p>Smartphones, feature phones, tablets and e-readers.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">💻</div>
+            <h3>Computers &amp; Laptops</h3>
+            <p>Desktops, laptops, keyboards, mice and hard drives.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🔋</div>
+            <h3>Batteries</h3>
+            <p>Phone batteries, power banks, UPS and rechargeable cells.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">📺</div>
+            <h3>TVs &amp; Monitors</h3>
+            <p>LED, LCD and CRT televisions and computer monitors.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🧺</div>
+            <h3>Home Appliances</h3>
+            <p>Microwaves, mixers, fans, irons and small kitchen devices.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🔌</div>
+            <h3>Cables &amp; Accessories</h3>
+            <p>Chargers, cables, headphones, speakers and adapters.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. HOW IT WORKS ============ -->
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">Four simple steps to recycle your electronic waste.</p>
+
+        <div class="grid grid-4">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Register</h3>
+            <p>Create your free account and log in securely.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Submit E-Waste</h3>
+            <p>Add item category, quantity, condition and description.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Request Pickup</h3>
+            <p>Enter your address and choose a convenient pickup date.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Track &amp; Recycle</h3>
+            <p>Follow your request status until it is collected and recycled.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. SERVICES SECTION ============ -->
+    <section class="section section-alt" id="services">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Everything you need for responsible e-waste disposal.</p>
+
+        <div class="grid grid-4">
+          <article class="card service-card">
+            <div class="card-icon">🚚</div>
+            <h3>Doorstep Pickup</h3>
+            <p>We collect your e-waste from your chosen address on your chosen date.</p>
+          </article>
+          <article class="card service-card">
+            <div class="card-icon">📍</div>
+            <h3>Status Tracking</h3>
+            <p>Know whether your request is pending, approved, collected or recycled.</p>
+          </article>
+          <article class="card service-card">
+            <div class="card-icon">🔒</div>
+            <h3>Safe Data Handling</h3>
+            <p>Your personal details are protected with secure authentication.</p>
+          </article>
+          <article class="card service-card">
+            <div class="card-icon">🌱</div>
+            <h3>Eco Recycling</h3>
+            <p>Items are recycled responsibly to protect the environment.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. CONTACT SECTION ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">Have a question? Send us a message and we will get back to you.</p>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Get In Touch</h3>
+            <p>📍 College Campus, LUCKNOW, Uttar Pradesh, India</p>
+            <p>📧 lokisolution@ewastemanager.com</p>
+            <p>📞 +91 98765 43210</p>
+            <p>🕒 Mon – Sat: 9:00 AM – 6:00 PM</p>
+          </div>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="contactName">Full Name</label>
+              <input type="text" id="contactName" placeholder="Enter your name" />
+              <small class="error-text" id="nameError"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" placeholder="Enter your email" />
+              <small class="error-text" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" rows="5" placeholder="Write your message..."></textarea>
+              <small class="error-text" id="messageError"></small>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            <p class="form-success" id="formSuccess"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ 8. FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <a href="#home" class="logo logo-light">♻️ E-Waste<span>Manager</span></a>
+        
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#services">Services</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="pages/login.html">Login</a></li>
+          <li><a href="pages/register.html">Register</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> E-Waste Management System. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- Our JavaScript (placed at the end so the HTML loads first) -->
+  <script src="js/main.js"></script>
+  <script>
+  const themeButton = document.getElementById("themeToggle");
+  const savedTheme = localStorage.getItem("theme");
+  const initialTheme = savedTheme === "dark" ? "dark" : "light";
+
+  document.documentElement.setAttribute("data-theme", initialTheme);
+  themeButton.setAttribute("aria-pressed", String(initialTheme === "dark"));
+  themeButton.textContent = initialTheme === "dark" ? "Light mode" : "Dark mode";
+
+  themeButton.addEventListener("click", () => {
+    const nextTheme =
+      document.documentElement.getAttribute("data-theme") === "dark"
+        ? "light"
+        : "dark";
+
+    document.documentElement.setAttribute("data-theme", nextTheme);
+    localStorage.setItem("theme", nextTheme);
+    themeButton.setAttribute("aria-pressed", String(nextTheme === "dark"));
+    themeButton.textContent = nextTheme === "dark" ? "Light mode" : "Dark mode";
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+
+# Node modules
+node_modules/
+**/node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Uploaded user files
+backend/uploads/*
+!backend/uploads/.gitkeep
